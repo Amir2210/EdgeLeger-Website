@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,body{
+  font-family: 'Open Sans', sans-serif;
+  line-height:1.6 ;
+  background: #fff;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+  color: #333;
+}
+
+ul{
+  list-style: none;
+}
+
+h1, h2{
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p{
+  margin: 10px 0;
+}
+
+img{
+  width: 100%;
+}
+
+/* navbar */
+
+.navbar{
+  display: flex;
+  /* make the element in the center of the div */
+  align-items: center;
+  /* make space between the h1 and the ul */
+  justify-content: space-between;
+  background-color:#333 ;
+  color: #fff;
+  opacity: 0.8;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0px;
+  padding: 0 30px;
+  transition: 0.8s ;
+}
+
+.navbar.top{
+  background: transparent;
+}
+
+.navbar a{
+  padding: 10px 20px;
+  margin: 0 5px;
+  color: #fff;
+}
+
+.navbar a:hover{
+  color: #28a745;
+  border-bottom: #28a745 solid 2px;
+}
+
+.navbar ul{
+  display: flex;
+}
+
+.navbar .logo{
+  font-weight: 400;
+}
+
+/* header */
+
+.hero{
+  background: url(IMG/home/showcase.jpg)no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  color: #fff; 
+}
+
+.hero .content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.hero .content h1{
+  font-size: 55px;
+}
+
+.hero .content p{
+  font-size: 23px;
+  max-width: 600px;
+  margin: 20px 0 30px;
+}
+
+.hero::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.6;
+}
+
+.hero *{
+  z-index: 10;
+}
+
+.hero.blog{
+  background: url(IMG/home/blog.jpg) no-repeat center center/cover;
+  height: 50vh;
+}
+
+
+.hero.post1{
+  background: url(IMG/blog/blog1.jpg) no-repeat center center/cover;
+  height: 50vh;
+}
+
+.hero.post2{
+  background: url(IMG/blog/blog2.jpg) no-repeat center center/cover;
+  height: 50vh;
+}
+
+.hero.post3{
+  background: url(IMG/blog/blog3.jpg) no-repeat center center/cover;
+  height: 50vh;
+}
+
+
+
+.icons{
+  padding: 30px;
+  height: 300px;
+  background-color: #28a745;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.icons p{
+  margin-bottom: 30px;
+}
+
+.icons h3,
+.people-img{
+  font-weight: bold;
+}
+
+.icons i{
+  margin: 13px 10px;
+  color: #28a745;
+  padding: 25px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.gallery-text{
+  color: #333;
+  padding: 25px;
+  height: 200px;
+  background: #28a745;
+  text-align: center;
+}
+
+.gallery-text h4,
+.gallery-text h2{
+  margin: 10px 0;
+}
+
+.gallery-text h2{
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.gallery .row1,
+.gallery .row2{
+  margin-bottom: 30px;
+  margin-top: 35px;
+  justify-content: space-around;
+  display: flex;
+}
+
+.gallery .row1 img,
+.gallery .row2 img{
+  transition: transform .2s;
+  width: 20%;
+  background: transparent;
+}
+
+.gallery .row1 img:hover,
+.gallery .row2 img:hover{
+  transform: scale(1.1);
+  opacity: 0.9;
+  border: #3331 1px solid;
+}
+
+.team{
+  justify-content: center;
+  text-align: center;
+}
+
+.team h4{
+  font-size: 25px;
+  font-weight: inherit;
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+.team h2{
+  font-weight: bolder;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.team-img{
+  margin-top: 55px;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.team-person{
+  width: 50%;
+}
+
+.team-person h4{
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.team-person img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.contact-us{
+  margin-top: 35px;
+  display: flex;
+}
+
+.contact-us .column-1{
+  width: 50%;
+}
+
+.contact-us .column-1 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact{
+  padding: 55px;
+  width: 50%;
+  background-color: aliceblue;
+}
+
+.contact h1{
+  margin-bottom: 20px;
+  font-weight: bolder;
+  font-size: 35px;
+}
+
+.contact input{
+  margin: 15px 0;
+  width: 100%;
+  padding: 25px;
+  border: solid 1px #f5f5f5;
+  border-radius: 8px;
+  
+}
+
+.contact input:focus{
+  outline-color: #28a745;
+}
+
+.contact label{
+  font-size: 20px;
+  font-weight: inherit;
+}
+
+.footer{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background: #333;
+}
+
+.footer .logos,
+.footer .logos a{
+  color: white;
+}
+
+.footer .logos {
+  margin: 50px; 
+}
+
+
+.footer .logos i{
+  margin: 15px;
+}
+
+.footer .logos i:hover{
+  color: #28a745;
+}
+
+/* post */
+
+.post{
+  padding: 50px 30px;
+}
+
+.post p{
+  font-weight: bold;
+}
+
+.post h2{
+  font-weight: bolder;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+  font-size: 40px;
+  border-bottom: #333 1px dotted;
+}
+
+.post img{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.post-img{
+  display: flex;
+  justify-content: center;
+}
+
+
+/* mobile */
+@media(max-width: 768px) {
+  .navbar{
+    align-items: center;
+    height: 100px;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .navbar .logo{
+    margin:8px 0;
+  }
+
+  .navbar a{
+    padding: 5px;
+    margin: 8px 8px;
+  }
+  .hero{
+
+    height: 100vh;
+  }
+
+  .icons{
+    padding: 20px;
+    height: 800px;
+    flex-direction: column;
+  }
+
+  .people-img {
+    flex-direction: column;
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .people-img .column-1,
+  .people-img .column-2 {
+    width: 100%;
+  }
+
+  .gallery-text{
+    height: 250px;
+  }
+
+  .gallery .row1,
+  .gallery .row{
+    margin: 50px 0;
+  }
+
+  .team h4{
+    margin-top: 0;
+  }
+
+  .team .team-img{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .team-person{
+    margin-bottom: 15px;
+  }
+
+  .team-person h4 {
+    padding: 0;
+    margin: 0;
+  }
+
+  .team-person p{
+    margin-bottom: 15px;
+  }
+
+  .contact-us{
+    flex-direction: column;
+  }
+
+  .contact-us .column-1{
+    width: 100%;
+    height: 300px;
+  }
+
+  .contact{
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact h1{
+    font-size: 30px;
+    font-weight: bolder;
+  }
+
+  .footer .logos i{
+    margin: 8px;
+  }
+
+  .article-img img{
+    display: none;
+  }
+
+  .hidden img{
+    display:block ;
+  }
+
+  .gallery .row1,
+  .gallery .row2{
+    margin: 0;
+    padding: 0;
+  }
+
+  .gallery .row1 img{
+    width: 50%;
+  }
+
+  .gallery .row1 :nth-child(2),
+  .gallery .row1 :nth-child(4){
+    display: none;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
